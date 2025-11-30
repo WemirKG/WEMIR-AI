@@ -432,3 +432,98 @@ body {
     padding: 3.2rem 1.1rem;
   }
 }
+/* ===========================
+   AI WEBSITE AUDIT PAGE STYLES
+   =========================== */
+
+:root {
+  --audit-bg: #050712;
+  --audit-bg-card: #0b0f24;
+  --audit-border-subtle: rgba(255, 255, 255, 0.1);
+  --audit-accent: #a6b4ff;
+  --audit-accent-soft: rgba(166, 180, 255, 0.15);
+  --audit-text-main: #f5f5f5;
+  --audit-text-muted: rgba(245, 245, 245, 0.75);
+  --audit-radius-lg: 1.2rem;
+  --audit-radius-sm: 0.5rem;
+  --audit-shadow-lg: 0 22px 40px rgba(0, 0, 0, 0.7);
+}
+
+/* BASIC RESET (only minimal so we don't fight other pages) */
+body.audit-page,
+body.audit-page * {
+  box-sizing: border-box;
+}
+
+/* PAGE BACKGROUND */
+body.audit-page {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Poppins", sans-serif;
+  background:
+    radial-gradient(circle at top, #252a40 0, var(--audit-bg) 40%, #020308 100%);
+  color: var(--audit-text-main);
+  line-height: 1.6;
+  padding: 3rem 0;
+}
+
+/* OUTER WRAPPER (if you use it), OR OVERRIDE .section / .section-inner */
+.audit-page main.section {
+  padding: 0 1.5rem;
+}
+
+.audit-page .section-inner {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+/* MAIN CARD (the audit document) */
+.audit-page .card {
+  background: radial-gradient(circle at top left, var(--audit-accent-soft), var(--audit-bg-card));
+  border-radius: var(--audit-radius-lg);
+  border: 1px solid var(--audit-border-subtle);
+  box-shadow: var(--audit-shadow-lg);
+  padding: 2.3rem 2rem;
+}
+
+/* HEADINGS */
+.audit-page h1 {
+  font-size: 1.7rem;
+  margin-bottom: 0.3rem;
+  line-height: 1.2;
+}
+
+.audit-page h2 {
+  font-size: 1.2rem;
+  margin-top: 1.8rem;
+  margin-bottom: 0.6rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 0.3rem;
+}
+
+.audit-page h3 {
+  font-size: 1rem;
+  margin-top: 1.1rem;
+  margin-bottom: 0.4rem;
+}
+
+/* META LINE (website / date / prepared by) */
+.audit-page p strong {
+  font-weight: 600;
+}
+
+.audit-page p {
+  font-size: 0.9rem;
+}
+
+/* TOP META ROW */
+.audit-page p:nth-of-type(1) {
+  margin-bottom: 1.1rem;
+  padding-top: 0.4rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  color: var(--audit-text-muted);
+}
+
+/* SECTION BLOCKS */
+.audit-page section,
+.audit-page .audit-section {
+  mar
